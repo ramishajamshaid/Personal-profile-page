@@ -1,0 +1,169 @@
+/* Basic reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --background: #f4f6fb;
+    --card: #ffffff;
+    --primary: #5b5bd6;
+    --primary-dark: #4141ad;
+    --text: #25263a;
+    --muted: #666b80;
+    --border: #e6e8f0;
+}
+
+body {
+    min-height: 100vh;
+    padding: 32px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--background);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+.profile-card {
+    width: 100%;
+    max-width: 760px;
+    overflow: hidden;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    box-shadow: 0 16px 45px rgba(38, 42, 80, 0.10);
+}
+
+.profile-header {
+    padding: 38px 28px 32px;
+    text-align: center;
+    background: linear-gradient(135deg, #eeefff, #f8f7ff);
+    border-bottom: 1px solid var(--border);
+}
+
+.avatar {
+    width: 78px;
+    height: 78px;
+    margin: 0 auto 14px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    box-shadow: 0 8px 20px rgba(91, 91, 214, 0.22);
+}
+
+.eyebrow {
+    margin-bottom: 5px;
+    color: var(--primary-dark);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+h1 {
+    margin-bottom: 8px;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    line-height: 1.2;
+}
+
+.subtitle {
+    color: var(--muted);
+    font-size: 0.98rem;
+}
+
+.profile-section {
+    padding: 26px 32px;
+    border-bottom: 1px solid var(--border);
+}
+
+h2 {
+    margin-bottom: 12px;
+    color: var(--primary-dark);
+    font-size: 1.25rem;
+}
+
+.profile-section p {
+    margin-bottom: 10px;
+    color: var(--muted);
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+}
+
+.skills-list li {
+    padding: 7px 13px;
+    border: 1px solid #dedfff;
+    border-radius: 999px;
+    background: #f3f3ff;
+    color: #4141ad;
+    font-size: 0.92rem;
+}
+
+.email-link,
+.github-link a {
+    color: var(--primary-dark);
+    font-weight: 700;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.email-link:hover,
+.github-link a:hover {
+    text-decoration: underline;
+}
+
+.github-link {
+    margin-top: 12px;
+}
+
+.profile-footer {
+    padding: 16px;
+    background: #fafaff;
+    color: var(--muted);
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+/* Responsive layout for phones and small screens */
+@media (max-width: 480px) {
+    body {
+        padding: 16px 10px;
+        align-items: flex-start;
+    }
+
+    .profile-card {
+        border-radius: 14px;
+    }
+
+    .profile-header {
+        padding: 28px 18px 24px;
+    }
+
+    .profile-section {
+        padding: 22px 20px;
+    }
+
+    .subtitle {
+        font-size: 0.9rem;
+    }
+
+    .skills-list {
+        gap: 8px;
+    }
+
+    .skills-list li {
+        padding: 6px 10px;
+        font-size: 0.85rem;
+    }
+}
